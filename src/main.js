@@ -2,7 +2,11 @@
 import { createApp } from 'vue';
 import App from './App.vue';
 import './assets/styles.css';
+import { createVfm } from 'vue-final-modal';
 
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"></link>
+const app = createApp(App);
 
-createApp(App).mount('#app');
+const vfm = createVfm();
+app.use(vfm);
+
+app.mount('#app');
