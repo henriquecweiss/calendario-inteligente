@@ -32,9 +32,9 @@ export default {
       const dueDate = new Date(this.todo.dueDate);
       const now = new Date();
       const differenceInDays = Math.floor((dueDate - now) / (1000 * 60 * 60 * 24));
-      if (differenceInDays === 0) {
+      if (differenceInDays < 0) {
         return 'Expira hoje!';
-      } else if (differenceInDays < 0) {
+      } else if (differenceInDays < 1) {
         return `O prazo já expirou há ${-differenceInDays} dias!`;
       } else {
         return `Você tem ${differenceInDays} dias para completar esta tarefa.`;
