@@ -1,11 +1,11 @@
 <template>
   <div>
     <button @click="openModal" class="bg-primary hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
-      Add New Task
+      Nova tarefa
     </button>
     <CustomModal :visible="showModal" @close="closeModal">
       <div class="bg-white shadow-md rounded-lg p-6">
-        <h2 class="text-2xl font-bold text-primary mb-4">{{ isEditing ? 'Edit Task' : 'Add New Task' }}</h2>
+        <h2 class="text-2xl font-bold text-primary mb-4">{{ isEditing ? 'Editar Tarefa' : 'Adicionar Tarefa' }}</h2>
         <form @submit.prevent="submitTodo">
           <div class="mb-4">
             <label class="block text-gray-700 text-sm font-bold mb-2" for="title">Title:</label>

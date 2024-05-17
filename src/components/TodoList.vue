@@ -1,7 +1,8 @@
 <template>
   <div>
-    <h2 class="text-3xl font-bold text-dark mb-6">ToDo List</h2>
+    <h2 class="text-3xl font-bold text-dark mb-6">Calendário Inteligente</h2>
     <AddTodo @todo-added="fetchTodos" ref="addTodoComponent"/>
+  <br>
     <div v-for="todo in sortedTodos" :key="todo._id" :class="['shadow-md rounded-lg p-4 mb-4', { 'bg-accent': todo.completed, 'bg-secondary': !todo.completed }]">
       <TodoItem :todo="todo" @update="fetchTodos" @edit="editTodo"/>
     </div>
