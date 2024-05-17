@@ -58,7 +58,7 @@ export default {
         await axios.delete(`http://localhost:5000/api/todos/${this.todo._id}`);
         this.$emit('update');
       } catch (error) {
-        console.error(error);
+        console.error(`Error deleting todo: ${error.message}`);
       }
     },
     editTodo() {
