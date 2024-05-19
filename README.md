@@ -66,7 +66,7 @@ Siga os passos abaixo para rodar o projeto localmente.
 ### Clonar o Repositório
 
 ```bash
-git clone https://github.com/seu-usuario/todo-list-app.git
+git clone https://github.com/henriquecweiss/calendario-inteligente.git
 cd todo-list-app
 ```
 
