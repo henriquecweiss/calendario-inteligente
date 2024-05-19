@@ -65,7 +65,7 @@ router.put('/:id', getTodo, async (req, res) => {
 router.delete('/:id', getTodo, async (req, res) => {
   console.log(`Deleting todo with ID: ${req.params.id}`);
   try {
-    await res.todo.deleteOne(); // Alterado de remove() para deleteOne()
+    await res.todo.deleteOne();
     res.json({ message: 'Deleted Todo' });
   } catch (err) {
     console.error(`Error deleting todo: ${err.message}`);
